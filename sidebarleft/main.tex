@@ -269,16 +269,15 @@
 
   % we wrap this part in a parbox, so title and description are not separated on a pagebreak
   % if you need more control on page breaks, remove the parbox
-  \parbox{\mpwidth}{
+  
     \begin{tabular*}{1\mpwidth}{p{0.72\mpwidth}  r}
       \textcolor{black}{\textbf{#2}} & \colorbox{maincol}{\makebox[0.25\mpwidth]{\textcolor{white}{#1}}} \\
       \textcolor{maincol}{\textbf{#3}} & \\
-    \end{tabular*}\\[8pt]
+    \end{tabular*}\\[1pt]
   
     \ifthenelse{\isempty{#4}}{}{
       \cvtext{#4}\\
     }
-  }
   \ifthenelse{\isempty{#5}}{}{
     \vspace{9pt}
     {#5}
@@ -333,8 +332,11 @@
   %---------------------------------------------------------------------------------------
   % META IMAGE
   %----------------------------------------------------------------------------------------
+  % \begin{center}
+  % \includegraphics[width=90pt,height=110pt]{Yousef.jpeg} 
+  % \end{center}
   \begin{center}
-  \includegraphics[width=90pt,height=110pt]{Yousef.jpeg} 
+  \includegraphics[width=100pt,height=100pt]{majhoolsoft.com QRcode.png} 
   \end{center}
   %trimming relative to image size
   %---------------------------------------------------------------------------------------
@@ -358,21 +360,21 @@
     
   \cvskill{HTML/CSS/SCSS} {3+ yrs} {0.85} \\[-2pt]
 
-  \cvskill{UI Design Tools} {2+ yrs} {0.7} \\[-2pt]
-
   \cvskill{JavaScript} {2+ yrs} {0.7} \\[-2pt]
 
   \cvskill{PHP} {2+ yrs} {0.6} \\[-2pt]
 
   \cvskill{SQL/No-SQL} {2+ yrs} {0.6} \\[-2pt]
 
+  \cvskill{UI Design Tools} {2+ yrs} {0.6} \\[-2pt]
+
   \cvskill{Linux} {2+ yrs} {0.5} \\[-2pt]
 
-  \cvskill{Unit Test} {<1 yrs} {0.3} \\[-2pt]
+  \cvskill{Unit Test} {1- yrs} {0.3} \\[-2pt]
 
   \cvskill{REST API/GraphQL} {2+ yrs} {0.5} \\[-2pt]
 
-  \cvskill{Cloud Computing} {<1 yrs} {0.3} \\[-2pt]
+  \cvskill{Cloud Computing} {1- yrs} {0.3} \\[-2pt]
 
   \cvskill{GIT} {3+ yrs} {0.65} \\[-2pt]
 %---------------------------------------------------------------------------------------
@@ -381,12 +383,13 @@
 
 \cvsection{CONTACT}
 
-  \icontext{MapMarker}{12}{Calgary, AB, Canada}{black}\\[6pt]
-  \icontext{Phone}{12}{+1 (587)897-3048 }{black}\\[6pt]
+  \icontext{MapMarker}{12}{Calgary, Alberta}{black}\\[6pt]
+  \icontext{Phone}{12}{587 897 3048 }{black}\\[6pt]
   \iconhref{Globe}{12}{\color{maincol}{Majhoolsoft.github.io}}{https://majhoolsoft.github.io}{black}\\[6pt]
   \iconemail{Envelope}{12}{\color{maincol}{fatouraee96@gmail.com}}{fatouraee96@gmail.com}{black}\\[6pt]
   \iconhref{File}{12}{\color{maincol}{Medium}}{https://medium.com/@majhoolsoft}{black}\\[6pt]
   \iconhref{Linkedin}{12}{\color{maincol}{Linked In}}{https://www.linkedin.com/in/yousef-fatouraee/}{black}\\[6pt]
+  \iconhref{Youtube}{12}{\color{maincol}{YouTube}}{https://www.youtube.com/@majhoolsoft}{black}\\[6pt]
   \\
 \end{leftcolumn}
 \begin{rightcolumn}
@@ -400,20 +403,18 @@
   \large{ \textcolor{white} {Software Engineer} }
   \end {center}
   \end{minipage}} \\[14pt]
-\vspace{-32pt}
+\vspace{-20pt}
 %---------------------------------------------------------------------------------------
 % SUMMARY
 %----------------------------------------------------------------------------------------
 
-\vfill\null
 \cvsection{SUMMARY}
 
 \cvtext{Self-taught and motivated \textbf{Web Developer}
   with 2+ years of experience.\\
-  Skilled in \textbf{HTML, CSS, JavaScript}, and \textbf{Front-end} libraries such as \textbf{React.js}.
+  Skilled in \textbf{HTML, CSS, JavaScript}, and familiar with \textbf{Front-end} libraries such as \textbf{React.js}, \textbf{Vue.js}, and \textbf{jQuery}.
 }
 
-\vfill\null
 %---------------------------------------------------------------------------------------
 % WORK EXPERIENCE
 %----------------------------------------------------------------------------------------
@@ -424,21 +425,22 @@
 {Imen Rayaneh Amirkabir}
 {Web Developer}
 {\cvlist{
+          % \item{
+          %       Actively engaged in web creative  \textbf{design}
+          % }
           \item{
-                Actively engaged in web creative  \textbf{design}.
-          }
-          \item{
-                Developed responsive  \textbf{UI}s using \textbf{Vanilla JS}, \textbf{HTML5} and \textbf{CSS3} by translating \textbf{sketches} and \textbf{wireframes} into high-quality code.
+                Developed responsive  \textbf{UI} using \textbf{imperative JS}, \textbf{HTML5} and \textbf{CSS3} by translating \textbf{sketches} and \textbf{wireframes} into high-quality code and engaging in web creative \textbf{design}
           }\item{
-                Developed dynamic web pages for reporting data by providing secured forms, charts, tables, and downloadable documents using \textbf{LAMP} stack.
+                Developed \textbf{portal} website to provide the information for B2B clients, with different access levels, by providing secured forms, charts, tables, and documents, using \textbf{LAMP stack}, which obtained customer demands for further development up to 2 more phases
+          % }\item{
+          %       Developed web crawler with \textbf{multi-thread} ability to fetch online data faster, and compare them with the output of the system when there was no test data
           }\item{
-                Developed a web \textbf{crawler} with \textbf{multiple thread}ing ability in order to fetch online information to validate the output of the system.
-          }\item{
-                Contributed to the data team by replacing \textbf{SQL} with \textbf{Elasticsearch} queries which helped data reading to speed up to \textbf{50x}.
+                Replaced \textbf{SQL} with \textbf{Elasticsearch} queries to help the portal with fetching the data 50x faster
           }
   }}
-  
+
 \vfill\null
+\vspace{-22pt}
 %---------------------------------------------------------------------------------------
 % SIDE PROJECTS
 %----------------------------------------------------------------------------------------
@@ -447,19 +449,21 @@
 \cvevent
 {Nov 21 - Present}
 {GitHub}
-{Open Source Developer}
+{Developer}
 {\cvlist{
          \item{
-               Developing a \href{https:\\publicipinfo.com}{web service} to present general information of public \textbf{IP} addresses using \textbf{Bootstrap}, \textbf{React.js}, \textbf{Node.js}, and \textbf{Elasticsearch}
+               Developing \href{https:\\publicipinfo.com}{web service} to present general information of public \textbf{IP} addresses using \textbf{Bootstrap}, \textbf{React.js}, \textbf{Node.js}, and \textbf{Elasticsearch}
           }
           \item{
-                \textbf{Debugged} a \textbf{security} issue for \textbf{WPGraphQL} \textbf{JWT} Authentication (a \textbf{WordPress} plugin).
+                Debugged security issues for WPGraphQL (\textbf{WordPress plugin}), which helps users comply with \textbf{JWT} authentication standards and prohibit vulnerable mutation requests using \textbf{GraphQL}
           }\item{
-                Developed a \textbf{Next.js} example with an \textbf{authentication} system which uses a signed and encrypted cookie to store session data with \textbf{JWT}, which relies on next-iron-session and SWR.
+               Developed \textbf{Next.js} example with \textbf{authentication} system which uses signed and encrypted cookies to store session data with \textbf{JWT}, which relies on next-iron-session and SWR
+          % }\item{
+          %       Developed \textbf{Next.js} version of the Black Dashboard React project which is originally made by Creativetim using \textbf{Bootstrap}
           }\item{
-                Developed \textbf{Next.js} version of the Black Dashboard React project which is originally made by Creativetim using \textbf{Bootstrap}.
+                Developed 2 \textbf{SPA} portfolio websites with new visual ideas using \textbf{React.js}, \textbf{Tailwind CSS}, and \textbf{vector images}
           }\item{
-                Developed 2 \textbf{SPA} portfolio websites with new graphical ideas using \textbf{React.js}, \textbf{Tailwind CSS}, and \textbf{vector images}.
+              Developed personality diagnosis \textbf{web application} by providing online exams for students, using \textbf{Laravel} and \textbf{Vue.js} with over 2k users
           }
     }
 }
@@ -471,9 +475,9 @@
 {Web Developer}
 {\cvlist{
           \item{
-                Developed a \href{https://icbme.ir/}{CMS website} for Iranian biomedical engineering conference events using \textbf{Laravel}.
+                Developed bilingual \href{https://icbme.ir/}{CMS website} for Iranian biomedical engineering annual conference events using \textbf{Laravel} which was visited more than 50k last year
           }\item{
-                Developed an introduction  \href{https://github.com/majhoolsoft/Ultimate-CMS-for-laboratory-webpage}{CMS \textbf{web application}} for Biological Fluids laboratory using \textbf{Laravel}, \textbf{React.js}, \textbf{Vue.js}, and \textbf{W3.CSS}.
+                Developed  \href{https://github.com/majhoolsoft/Ultimate-CMS-for-laboratory-webpage}{bilingual \textbf{Single-page application}} with content management dashboard and multiple access levels using  \textbf{Laravel}, \textbf{React.js}, \textbf{Vue.js}, and \textbf{W3.CSS}, which connects students to their supervisors and shares their courses, research, keywords, and media
           }
     }
 }
@@ -487,3 +491,4 @@
 \end{rightcolumn}
 \end{paracol}
 \end{document}
+
