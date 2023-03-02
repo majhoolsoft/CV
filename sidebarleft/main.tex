@@ -22,13 +22,12 @@
 %-----------------------------------------------------------------------------------------------------------------------------------------------%
 
 \documentclass[10pt,A4]{article}  
-
 %----------------------------------------------------------------------------------------
 % ENCODING
 %----------------------------------------------------------------------------------------
 % Remove blank pages
 \let\clearpage\relax
-
+% -------------------------------------------------------------------------------------
 % we use utf8 since we want to build from any machine
 \usepackage[utf8]{inputenc}   
 
@@ -45,14 +44,14 @@
 
 % some tex-live fonts - choose your own
 
-%\usepackage[defaultsans]{droidsans}
+% \usepackage[defaultsans]{droidsans}
 %\usepackage[default]{comfortaa}
-%\usepackage{cmbright}
+% \usepackage{cmbright}
 \usepackage[default]{raleway}
 %\usepackage{fetamont}
 %\usepackage[default]{gillius}
-%\usepackage[light,math]{iwona}
-%\usepackage[thin]{roboto} 
+% \usepackage[light,math]{iwona}
+% \usepackage[thin]{roboto} 
 
 % set font default
 \renewcommand*\familydefault{\sfdefault}  
@@ -199,7 +198,7 @@
 
 % renders a standard latex list but abstracts away the environment definition (begin/end)
 \newcommand{\cvlist}[1] {
-  \begin{itemize}{#1}\end{itemize}
+  \begin{itemize}\small{#1}\end{itemize}
 }
 
 %----------------------------------------------------------------------------------------
@@ -312,7 +311,17 @@
 
   \cvtext{#4}\\[14pt]
 }
+%---------------------------------------------------------------------------------------
+%	QR CODE
+%----------------------------------------------------------------------------------------
 
+% Renders a qrcode image (centered, relative to the parentwidth)
+% param 1: percent width, from 0 to 1
+\newcommand{\cvqrcode}[1] {
+	\begin{center}
+		\includegraphics[width={#1}\mpwidth]{majhoolsoft.com QRcode}
+	\end{center}
+}
 %============================================================================%
 %
 %
@@ -329,166 +338,145 @@
 \colseprulecolor{lightcol}
 \begin{paracol}{2}
 \begin{leftcolumn}
-  %---------------------------------------------------------------------------------------
-  % META IMAGE
-  %----------------------------------------------------------------------------------------
-  % \begin{center}
-  % \includegraphics[width=90pt,height=110pt]{Yousef.jpeg} 
-  % \end{center}
-  \begin{center}
-  \includegraphics[width=100pt,height=100pt]{majhoolsoft.com QRcode.png} 
-  \end{center}
-  %trimming relative to image size
-  %---------------------------------------------------------------------------------------
-  % EDUCATION
-  %----------------------------------------------------------------------------------------
-  \cvsection{EDUCATION}
-  \cvmetaevent{2014 - 2019}
-  {B. Sc. Computer Engineering.}
-  {\href{https://aut.ac.ir/en}{
-  \small{Amirkabir University of Technology}}\\
-  \small{(Tehran Polytechnic)}\\
-  }
-  {Advisor: \href{https://www.torontomu.ca/information-technology-management/faculty-research/mehdi-shajari/}{Dr. Mehdi Shajari}}
-\\
-  %---------------------------------------------------------------------------------------
-  % META SKILLS
-  %----------------------------------------------------------------------------------------
-  \cvsection{SKILLS}
-    
-  \vspace{-10pt}
-    
-  \cvskill{HTML/CSS/SCSS} {3+ yrs} {0.85} \\[-2pt]
+%---------------------------------------------------------------------------------------
+% META IMAGE
+%----------------------------------------------------------------------------------------
+% \begin{center}
+% \includegraphics[width=90pt,height=110pt]{Yousef.jpeg} 
+% \end{center}
+%---------------------------------------------------------------------------------------
+% EDUCATION
+%----------------------------------------------------------------------------------------
+\vfill\null
+\cvsection{EDUCATION}
 
-  \cvskill{JavaScript} {2+ yrs} {0.7} \\[-2pt]
+\cvmetaevent
+{2014 - 2019}
+{Bachelor's in\\ Information Technology.}
+{\href{https://aut.ac.ir/en}{\textbf{\underline{AUT}}}}
+%---------------------------------------------------------------------------------------
+% META-SKILLS
+%----------------------------------------------------------------------------------------
+\vfill\null
+\cvsection{SKILLS}
 
-  \cvskill{PHP} {2+ yrs} {0.6} \\[-2pt]
+\cvskill{\textbf{HTML, CSS, SCSS}} {} {0.85} \\[-2pt]
 
-  \cvskill{SQL/No-SQL} {2+ yrs} {0.6} \\[-2pt]
+\cvskill{\textbf{JavaScript}} {} {0.7} \\[-2pt]
 
-  \cvskill{UI Design Tools} {2+ yrs} {0.6} \\[-2pt]
+\cvskill{\textbf{PHP}} {} {0.6} \\[-2pt]
 
-  \cvskill{Linux} {2+ yrs} {0.5} \\[-2pt]
+\cvskill{\textbf{SQL, No-SQL}} {} {0.6} \\[-2pt]
 
-  \cvskill{Unit Test} {1- yrs} {0.3} \\[-2pt]
+\cvskill{\textbf{Adobe Photoshop, XD}} {} {0.6} \\[-2pt]
 
-  \cvskill{REST API/GraphQL} {2+ yrs} {0.5} \\[-2pt]
+\cvskill{\textbf{Linux}} {} {0.5} \\[-2pt]
 
-  \cvskill{Cloud Computing} {1- yrs} {0.3} \\[-2pt]
+\cvskill{\textbf{Unit Test}} {} {0.3} \\[-2pt]
 
-  \cvskill{GIT} {3+ yrs} {0.65} \\[-2pt]
+\cvskill{\textbf{REST API, GraphQL}} {} {0.5} \\[-2pt]
+
+\cvskill{\textbf{Cloud Computing}} {} {0.3} \\[-2pt]
+
+\cvskill{\textbf{GIT}} {} {0.65} \\[-2pt]
 %---------------------------------------------------------------------------------------
 % Contact
 %----------------------------------------------------------------------------------------
-
+\vfill\null
 \cvsection{CONTACT}
 
   \icontext{MapMarker}{12}{Calgary, Alberta}{black}\\[6pt]
   \icontext{Phone}{12}{587 897 3048 }{black}\\[6pt]
-  \iconhref{Globe}{12}{\color{maincol}{Majhoolsoft.github.io}}{https://majhoolsoft.github.io}{black}\\[6pt]
-  \iconemail{Envelope}{12}{\color{maincol}{fatouraee96@gmail.com}}{fatouraee96@gmail.com}{black}\\[6pt]
-  \iconhref{File}{12}{\color{maincol}{Medium}}{https://medium.com/@majhoolsoft}{black}\\[6pt]
-  \iconhref{Linkedin}{12}{\color{maincol}{Linked In}}{https://www.linkedin.com/in/yousef-fatouraee/}{black}\\[6pt]
-  \iconhref{Youtube}{12}{\color{maincol}{YouTube}}{https://www.youtube.com/@majhoolsoft}{black}\\[6pt]
-  \\
+  \iconhref{Globe}{12}{\color{maincol}{\underline{Majhoolsoft.github.io}}}{https://majhoolsoft.github.io}{black}\\[6pt]
+  \iconemail{Envelope}{12}{\color{maincol}{\underline{fatouraee96@gmail.com}}}{fatouraee96@gmail.com}{black}\\[6pt]
+  \iconhref{File}{12}{\color{maincol}{\underline{Medium}}}{https://medium.com/@majhoolsoft}{black}\\[6pt]
+  \iconhref{Linkedin}{12}{\color{maincol}{\underline{Linked In}}}{https://www.linkedin.com/in/yousef-fatouraee/}{black}\\[6pt]
+  \iconhref{Youtube}{12}{\color{maincol}{\underline{YouTube}}}{https://www.youtube.com/@majhoolsoft}{black}\\[6pt]
+\cvqrcode{0.4}
 \end{leftcolumn}
 \begin{rightcolumn}
 %---------------------------------------------------------------------------------------
+%	STOP HYPHENATION
+%----------------------------------------------------------------------------------------
+\tolerance=1
+\emergencystretch=\maxdimen
+\hyphenpenalty=10000
+\hbadness=10000
+%---------------------------------------------------------------------------------------
+%---------------------------------------------------------------------------------------
 % TITLE  HEADER
 %----------------------------------------------------------------------------------------
-\fcolorbox{white}{darkcol}{\begin{minipage}[c][2.2cm][c]{1\mpwidth}
-  \begin {center}
-  \Huge{ \textbf{ \textcolor{white}{ \uppercase{ Yousef Fatouraee } } } } \\[-24pt]
-  \textcolor{white}{ \rule{0.1\textwidth}{1.25pt} } \\[4pt]
-  \large{ \textcolor{white} {Software Engineer} }
-  \end {center}
-  \end{minipage}} \\[14pt]
-\vspace{-20pt}
+\fcolorbox{white}{darkcol}{\begin{minipage}[c][3.5cm][c]{1\mpwidth}
+	\begin {center}
+		\HUGE{ \textbf{ \textcolor{white}{ \uppercase{ Yousef Fatouraee } } } } \\[-24pt]
+		\textcolor{white}{ \rule{0.1\textwidth}{1.25pt} } \\[4pt]
+		\large{ \textcolor{white} {Software Engineer} }
+	\end {center}
+\end{minipage}} \\[14pt]
+\vspace{-12pt}
+
 %---------------------------------------------------------------------------------------
 % SUMMARY
 %----------------------------------------------------------------------------------------
-
+\vfill\null
 \cvsection{SUMMARY}
 
-\cvtext{Self-taught and motivated \textbf{Web Developer}
-  with 2+ years of experience.\\
-  Skilled in \textbf{HTML, CSS, JavaScript}, and familiar with \textbf{Front-end} libraries such as \textbf{React.js}, \textbf{Vue.js}, and \textbf{jQuery}.
+\cvtext{
+Self-taught and geek \textbf{Web Developer} with \textbf{2+ years} of experience in \textbf{HTML}, \textbf{CSS}, \textbf{PHP}, and \textbf{JavaScript} libraries such as \textbf{React.js}, \textbf{Vue.js} and \textbf{jQuery}
 }
-
 %---------------------------------------------------------------------------------------
 % WORK EXPERIENCE
 %----------------------------------------------------------------------------------------
+\vfill\null
 \cvsection{WORK EXPERIENCE}
 
 \cvevent
-{July 19 - July 21}
+{2019 - 2021}
 {Imen Rayaneh Amirkabir}
 {Web Developer}
+{}
 {\cvlist{
-          % \item{
-          %       Actively engaged in web creative  \textbf{design}
-          % }
           \item{
-                Developed responsive  \textbf{UI} using \textbf{imperative JS}, \textbf{HTML5} and \textbf{CSS3} by translating \textbf{sketches} and \textbf{wireframes} into high-quality code and engaging in web creative \textbf{design}
+                Translated \textbf{sketches} and \textbf{wireframes} into responsive \textbf{user interfaces} using \textbf{imperative JavaScript}, \textbf{HTML5}, and \textbf{CSS3} by collaborating closely with the \textbf{design} team to make informed decisions and create high-quality \textbf{code}
           }\item{
-                Developed \textbf{portal} website to provide the information for B2B clients, with different access levels, by providing secured forms, charts, tables, and documents, using \textbf{LAMP stack}, which obtained customer demands for further development up to 2 more phases
-          % }\item{
-          %       Developed web crawler with \textbf{multi-thread} ability to fetch online data faster, and compare them with the output of the system when there was no test data
+                Developed \textbf{portal} using the \textbf{LAMP stack} to provide \textbf{forms}, \textbf{charts}, \textbf{tables}, and \textbf{documents} to clients with varying \textbf{access levels} which resulted in successful customer adoption and demand for \textbf{2+} project development phases
           }\item{
-                Replaced \textbf{SQL} with \textbf{Elasticsearch} queries to help the portal with fetching the data 50x faster
+                Improved portal \textbf{response time} by up to \textbf{50x} by replacing \textbf{SQL queries} with \textbf{Elasticsearch queries}
           }
-  }}
+    }
+}
 
-\vfill\null
-\vspace{-22pt}
 %---------------------------------------------------------------------------------------
 % SIDE PROJECTS
 %----------------------------------------------------------------------------------------
+\vfill\null
 \cvsection{SIDE PROJECTS}
 
-\cvevent
-{Nov 21 - Present}
-{GitHub}
-{Developer}
 {\cvlist{
          \item{
-               Developing \href{https:\\publicipinfo.com}{web service} to present general information of public \textbf{IP} addresses using \textbf{Bootstrap}, \textbf{React.js}, \textbf{Node.js}, and \textbf{Elasticsearch}
+                Currently, creating a \href{https:\\publicipinfo.com}{\underline{web service}} using \textbf{Bootstrap}, \textbf{React.js}, \textbf{Node.js}, and \textbf{Elasticsearch} to display \textbf{public IP address} information and integrate with other applications through \textbf{API} with average search response time of \textbf{100 milliseconds}
           }
           \item{
-                Debugged security issues for WPGraphQL (\textbf{WordPress plugin}), which helps users comply with \textbf{JWT} authentication standards and prohibit vulnerable mutation requests using \textbf{GraphQL}
+                Debugged security issues for WPGraphQL, a \textbf{WordPress plugin} that assists users in conforming to JSON Web Token (\textbf{JWT}) \textbf{authentication} standards and preventing vulnerable mutation requests through the use of \textbf{GraphQL}
           }\item{
-               Developed \textbf{Next.js} example with \textbf{authentication} system which uses signed and encrypted cookies to store session data with \textbf{JWT}, which relies on next-iron-session and SWR
+               Implemented a secure \textbf{authentication} system for \textbf{Next.js}, utilizing signed and \textbf{encrypted cookies} with \textbf{JWT} to store session data, and relying on next-iron-session and SWR to enhance security and performance
           % }\item{
           %       Developed \textbf{Next.js} version of the Black Dashboard React project which is originally made by Creativetim using \textbf{Bootstrap}
           }\item{
-                Developed 2 \textbf{SPA} portfolio websites with new visual ideas using \textbf{React.js}, \textbf{Tailwind CSS}, and \textbf{vector images}
+                Designed and created \textbf{2+} visually striking portfolios with Single-page application (\textbf{SPA}) architecture, utilizing \textbf{React.js}, \textbf{Tailwind CSS}, and \textbf{vector images} with FCP speed of \textbf{<1 second}
           }\item{
-              Developed personality diagnosis \textbf{web application} by providing online exams for students, using \textbf{Laravel} and \textbf{Vue.js} with over 2k users
+              Designed and deployed a web-based personality diagnosis application using \textbf{Laravel} and \textbf{Vue.js}, providing \textbf{online exams} to over \textbf{2k students}
           }
-    }
-}
-
-\vfill\null
-\cvevent
-{Dec 19 - Jan 22}
-{Iranian Society for Biomedical Engineering}
-{Web Developer}
-{\cvlist{
           \item{
-                Developed bilingual \href{https://icbme.ir/}{CMS website} for Iranian biomedical engineering annual conference events using \textbf{Laravel} which was visited more than 50k last year
+                Developed \href{https://icbme.ir/}{\underline{bilingual CMS website}} for the annual Iranian Biomedical Engineering conference events using \textbf{Laravel}, resulting in over \textbf{50k visits} in the past year
           }\item{
-                Developed  \href{https://github.com/majhoolsoft/Ultimate-CMS-for-laboratory-webpage}{bilingual \textbf{Single-page application}} with content management dashboard and multiple access levels using  \textbf{Laravel}, \textbf{React.js}, \textbf{Vue.js}, and \textbf{W3.CSS}, which connects students to their supervisors and shares their courses, research, keywords, and media
+                Created \href{https://github.com/majhoolsoft/Ultimate-CMS-for-laboratory-webpage}{\underline{multilingual \textbf{SPA}}} that connects students with supervisors, featuring CMS secured by distinct access levels, utilizing \textbf{Laravel}, \textbf{React.js}, \textbf{Vue.js}, and \textbf{W3.CSS} with \textbf{over 8 stars} on the git repository and \textbf{over 3k YouTube views}
+          }
+          \item{
+              Served as \textbf{Teaching Assistant} for the \textbf{Object Oriented Programming} in \textbf{Java} course at Amirkabir University of Technology, providing one-on-one assistance to 50 students and grading assignments
           }
     }
 }
-\mbox{}
-\vfill
-\mbox{}
-\vfill
-\mbox{}
-\vfill
-\mbox{}
 \end{rightcolumn}
 \end{paracol}
 \end{document}
-
